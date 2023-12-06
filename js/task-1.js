@@ -1,20 +1,7 @@
-function isEnoughCapacity(products, containerSize) {
-    const totalQuantity = Object.values(products).reduce((sum, quantity) => sum + quantity);
-    return totalQuantity <= containerSize;
-}
+const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
 
-console.log(
-  isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)
-); // true
+const ascendingReleaseDates = releaseDates.toSorted((a,b) => a-b);
 
-console.log(
-  isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12)
-); // false
+const descendingReleaseDates = releaseDates.toSorted((a,b) => b-a);
 
-console.log(
-  isEnoughCapacity({ apples: 1, lime: 5, tomatoes: 3 }, 14)
-); // true
-
-console.log(
-  isEnoughCapacity({ apples: 18, potatoes: 5, oranges: 2 }, 7)
-); // false
+console.log(ascendingReleaseDates);

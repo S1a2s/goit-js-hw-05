@@ -1,7 +1,5 @@
-const getUserNames = (users) => {
-  const nameCheck = users.map(user => user.name);
-  return nameCheck;
-}
+const getUserNames = (users) => users.map(user => user.name);
+
 console.log(
   getUserNames([
   {
